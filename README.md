@@ -1,2 +1,0 @@
-# Formation-ajcc-
-Exercices applicatifs
