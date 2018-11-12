@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1541102391 source:/home/ghania/Bureau/Exercices/Exo9/main.c
+	<stdio.h>
+	<stdlib.h>
+
+1541154406 source:/home/ajc84/Bureau/Fonctions/Exo9/main.c
+	<stdio.h>
+	<stdlib.h>
+
