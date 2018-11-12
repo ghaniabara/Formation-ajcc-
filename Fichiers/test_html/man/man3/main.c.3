@@ -1,0 +1,87 @@
+.TH "main.c" 3 "Jeudi 8 Novembre 2018" "Version v3" "projet_test" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+main.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+
+.SS "Structures de données"
+
+.in +1c
+.ti -1c
+.RI "struct \fBTypeLivre\fP"
+.br
+.in -1c
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBTypeLivre\fP \fBLIV\fP"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsavetexte\fP (\fBLIV\fP *premier)"
+.br
+.RI "savetexte sauvegarde la bibliotheque "
+.ti -1c
+.RI "void \fBaffiche\fP (\fBLIV\fP *premier)"
+.br
+.RI "affiche la fonction \fBaffiche\fP permet de lister ma bibliothèque "
+.ti -1c
+.RI "void \fBajoute\fP (char *titre, char *auteur, int an, \fBLIV\fP *premier)"
+.br
+.ti -1c
+.RI "int \fBmain\fP ()"
+.br
+.in -1c
+.SH "Documentation des définitions de type"
+.PP 
+.SS "typedef struct \fBTypeLivre\fP  \fBLIV\fP"
+
+.SH "Documentation des fonctions"
+.PP 
+.SS "void affiche (\fBLIV\fP * premier)"
+
+.PP
+affiche la fonction \fBaffiche\fP permet de lister ma bibliothèque 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIpremier\fP un pointeur qui pointe sur le premier livre de ma bibliotéque
+.IP "\(bu" 2
+auteur GB
+.IP "\(bu" 2
+date 181107
+.IP "  \(bu" 4
+revu 181108 
+.PP
+
+.PP
+.RE
+.PP
+
+.SS "void ajoute (char * titre, char * auteur, int an, \fBLIV\fP * premier)"
+
+.SS "int main ()"
+
+.SS "void savetexte (\fBLIV\fP * premier)"
+
+.PP
+savetexte sauvegarde la bibliotheque 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIpremier\fP un pointeur sur LIV \fBoik\fP 
+.RE
+.PP
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour projet_test à partir du code source\&.

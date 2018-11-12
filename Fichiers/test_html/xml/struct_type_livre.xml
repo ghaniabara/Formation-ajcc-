@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="struct_type_livre" kind="struct" language="C++" prot="public">
+    <compoundname>TypeLivre</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_type_livre_1aa8da5ea2a4c27972141aa0f3f6e42e2a" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char auteur[200]</definition>
+        <argsstring>[200]</argsstring>
+        <name>auteur</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.c" line="4" column="1" bodyfile="main.c" bodystart="4" bodyend="-1"/>
+        <referencedby refid="main_8c_1aa039232093df295033882bae6a20512e" compoundref="main_8c" startline="24" endline="32">affiche</referencedby>
+        <referencedby refid="main_8c_1a33be8be09e10c0ed6dbef6610cd5a288" compoundref="main_8c" startline="35" endline="49">ajoute</referencedby>
+        <referencedby refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8c" startline="51" endline="73">main</referencedby>
+        <referencedby refid="main_8c_1a161d1848317622875c39592c1676a3d1" compoundref="main_8c" startline="75" endline="97">savetexte</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_type_livre_1a18d0cb28c32d8cf949bd24fa181cc8e7" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char titre[200]</definition>
+        <argsstring>[200]</argsstring>
+        <name>titre</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.c" line="5" column="1" bodyfile="main.c" bodystart="5" bodyend="-1"/>
+        <referencedby refid="main_8c_1aa039232093df295033882bae6a20512e" compoundref="main_8c" startline="24" endline="32">affiche</referencedby>
+        <referencedby refid="main_8c_1a33be8be09e10c0ed6dbef6610cd5a288" compoundref="main_8c" startline="35" endline="49">ajoute</referencedby>
+        <referencedby refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8c" startline="51" endline="73">main</referencedby>
+        <referencedby refid="main_8c_1a161d1848317622875c39592c1676a3d1" compoundref="main_8c" startline="75" endline="97">savetexte</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_type_livre_1a4d177aef82bf2ac1f4509933737b872e" prot="public" static="no" mutable="no">
+        <type>short</type>
+        <definition>short an</definition>
+        <argsstring></argsstring>
+        <name>an</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.c" line="6" column="1" bodyfile="main.c" bodystart="6" bodyend="-1"/>
+        <referencedby refid="main_8c_1aa039232093df295033882bae6a20512e" compoundref="main_8c" startline="24" endline="32">affiche</referencedby>
+        <referencedby refid="main_8c_1a33be8be09e10c0ed6dbef6610cd5a288" compoundref="main_8c" startline="35" endline="49">ajoute</referencedby>
+        <referencedby refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8c" startline="51" endline="73">main</referencedby>
+        <referencedby refid="main_8c_1a161d1848317622875c39592c1676a3d1" compoundref="main_8c" startline="75" endline="97">savetexte</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_type_livre_1a16907d8be5c85cdc64ae27f31aba0b2a" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_type_livre" kindref="compound">TypeLivre</ref> *</type>
+        <definition>struct TypeLivre* suivant</definition>
+        <argsstring></argsstring>
+        <name>suivant</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.c" line="7" column="1" bodyfile="main.c" bodystart="7" bodyend="-1"/>
+        <referencedby refid="main_8c_1aa039232093df295033882bae6a20512e" compoundref="main_8c" startline="24" endline="32">affiche</referencedby>
+        <referencedby refid="main_8c_1a33be8be09e10c0ed6dbef6610cd5a288" compoundref="main_8c" startline="35" endline="49">ajoute</referencedby>
+        <referencedby refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8c" startline="51" endline="73">main</referencedby>
+        <referencedby refid="main_8c_1a161d1848317622875c39592c1676a3d1" compoundref="main_8c" startline="75" endline="97">savetexte</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>TypeLivre</label>
+        <link refid="struct_type_livre"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>suivant</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="main.c" line="3" column="1" bodyfile="main.c" bodystart="3" bodyend="8"/>
+    <listofallmembers>
+      <member refid="struct_type_livre_1a4d177aef82bf2ac1f4509933737b872e" prot="public" virt="non-virtual"><scope>TypeLivre</scope><name>an</name></member>
+      <member refid="struct_type_livre_1aa8da5ea2a4c27972141aa0f3f6e42e2a" prot="public" virt="non-virtual"><scope>TypeLivre</scope><name>auteur</name></member>
+      <member refid="struct_type_livre_1a16907d8be5c85cdc64ae27f31aba0b2a" prot="public" virt="non-virtual"><scope>TypeLivre</scope><name>suivant</name></member>
+      <member refid="struct_type_livre_1a18d0cb28c32d8cf949bd24fa181cc8e7" prot="public" virt="non-virtual"><scope>TypeLivre</scope><name>titre</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

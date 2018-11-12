@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1541002393 source:/home/ajc84/Bureau/Fonctions/fonctionChar/main.c
+	<stdio.h>
+	<stdlib.h>
+

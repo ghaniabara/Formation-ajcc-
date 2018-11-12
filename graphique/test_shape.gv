@@ -1,0 +1,9 @@
+digraph G {
+rankdir=RL;
+node [color = "blue"];
+edge [color = "red"];
+
+A -> B -> C [color="limegreen"];
+C -> B -> D -> A;
+D -> D;
+}
