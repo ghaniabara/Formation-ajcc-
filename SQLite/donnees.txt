@@ -1,0 +1,12 @@
+        echo: off
+         eqp: off
+     explain: auto
+     headers: on
+        mode: list
+   nullvalue: ""
+      output: donnees.txt
+colseparator: "|"
+rowseparator: "\n"
+       stats: off
+       width: 5 5 20 20 5 
+    filename: dbcinema

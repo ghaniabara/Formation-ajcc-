@@ -1,0 +1,201 @@
+--
+--create database cinemaTek;
+-- use  cinemaTek;
+
+create table PERSONNE
+
+(idPers int(2) not null,
+
+nom char(20),
+
+prenom char(20),
+primary key (idpers));
+
+
+create table FILM
+
+(idfilm int(2) not null,
+
+idRealisateur int(2) references PERSONNE(idpers)on delete restrict on update restrict,
+
+titre char(60),
+
+genre char(20),
+
+annee int(4),
+primary key (idfilm));
+
+
+--alter table FILM add constraint FK_APPARTIENT foreign key (idrealisateur)references PERSONNE(idpers)on delete restrict on update restrict;
+
+
+
+insert into personne
+ values(01, 'Kidman','Nicole');
+
+
+
+insert into personne 
+values(02, 'Bettany','Paul');
+
+
+
+insert into personne 
+values(03, 'Watson','Emily');
+
+
+
+insert into personne 
+values(04, 'Skarsgard','Stellan');
+
+
+
+insert into personne 
+values(05, 'Travolta','John');
+
+
+
+insert into personne 
+values(06, 'L.Jackson','Samuel');
+
+
+
+insert into personne
+ values(07, 'Willis','Bruce');
+
+
+
+insert into personne 
+values(08, 'Irons','Jeremy');
+
+
+
+insert into personne 
+values(09, 'Spader','James');
+
+
+
+insert into personne
+ values(10, 'Hunter','Holly');
+
+
+
+insert into personne
+ values(11, 'Arquette','Rosanna');
+
+
+
+insert into personne 
+values(12, 'Wayne','John');
+
+
+
+insert into personne
+ values(13, 'Von Trier','Lars');
+
+
+
+insert into personne
+ values(14, 'Tarantino','Quentin');
+
+
+
+insert into personne
+ values(15, 'Cronenberg','David');
+
+
+
+
+insert into personne
+ values(16, 'Mazursky','Paul');
+
+
+
+
+insert into personne
+ values(17, 'Jones','Grace');
+
+
+
+
+insert into personne
+ values(18, 'Glen','John');
+
+
+
+
+insert into personne 
+values(19, 'Eastwood','Clint');
+
+
+
+
+insert into personne
+ values(20, 'Spacey','Kevin');
+
+
+
+
+insert into personne 
+values(21, 'Mendes','Sam');
+
+
+
+
+insert into personne 
+values(22, 'Jolie','Angelina');
+
+
+
+
+insert into Film 
+values(01,15, 'Crash','Drame',1996);
+
+
+
+
+insert into film
+ values(02,15, 'Faux-semblants','Epouvante',1988);
+
+
+
+
+insert into film
+values(03,14, 'Pulp Fiction','Policier',1994);
+
+
+
+
+insert into film
+ values(04,13, 'Breaking the waves','Drame',1996);
+
+
+
+
+insert into film 
+values(05,13, 'Dogville','Drame',2002);
+
+
+
+
+insert into film 
+values(06,12, 'Alamo','Western',1960);
+
+
+
+
+insert into film 
+values(07,18, 'Dangereusement vôtre','Espionnage',1985);
+
+
+
+insert into film 
+values(08,19, 'Chasseur blanc, coeur noir','Drame',1989);
+
+
+
+
+insert into film 
+values(10,21, 'American Beauty','Drame',1999);
+
+
