@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>461</width>
+    <height>333</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>461</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menufichier">
+    <property name="title">
+     <string>Fichier</string>
+    </property>
+    <addaction name="actionnouveau_fichier_projet"/>
+    <addaction name="actionouvrir_fichier_projet"/>
+    <addaction name="separator"/>
+    <addaction name="actionsauvegarder"/>
+    <addaction name="actionfermer"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuEdition">
+    <property name="title">
+     <string>Compiler</string>
+    </property>
+    <addaction name="actioncompiler"/>
+    <addaction name="actionex_cuter"/>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="menufichier"/>
+   <addaction name="menuEdition"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_dition">
+   <property name="text">
+    <string>édition</string>
+   </property>
+  </action>
+  <action name="actioncomplir">
+   <property name="text">
+    <string>complir</string>
+   </property>
+  </action>
+  <action name="actiond_boguer">
+   <property name="text">
+    <string>déboguer</string>
+   </property>
+  </action>
+  <action name="actionanalyze">
+   <property name="text">
+    <string>analyze</string>
+   </property>
+  </action>
+  <action name="actionoutils">
+   <property name="text">
+    <string>outils</string>
+   </property>
+  </action>
+  <action name="actionfen_tre">
+   <property name="text">
+    <string>fenêtre</string>
+   </property>
+  </action>
+  <action name="actionaide">
+   <property name="text">
+    <string>aide</string>
+   </property>
+  </action>
+  <action name="actionnouveau_fichier_projet">
+   <property name="text">
+    <string>nouveau fichier/projet</string>
+   </property>
+   <property name="toolTip">
+    <string>open new file</string>
+   </property>
+  </action>
+  <action name="actionouvrir_fichier_projet">
+   <property name="text">
+    <string>ouvrir fichier/projet</string>
+   </property>
+  </action>
+  <action name="actionsauvegarder">
+   <property name="text">
+    <string>sauvegarder</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+   <property name="shortcutVisibleInContextMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionfermer">
+   <property name="text">
+    <string>fermer</string>
+   </property>
+   <property name="shortcutVisibleInContextMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actioncompiler">
+   <property name="text">
+    <string>compiler</string>
+   </property>
+  </action>
+  <action name="actionex_cuter">
+   <property name="text">
+    <string>exécuter</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

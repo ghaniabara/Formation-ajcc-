@@ -9,6 +9,7 @@ struct test{
 
 
 
+
 int main()
 {
    struct test*p;
