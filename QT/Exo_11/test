@@ -1,0 +1,420 @@
+saveRRECTION EXO C++
+
+//############# EXO1 ##################################################
+
+#include <stdio.h>
+#include <stdlib.h>
+struct test{
+
+    int i;
+
+    //void clear(){i=0;}
+};
+
+
+
+int main()
+{
+   struct test*p;
+   p=(struct test*)malloc(sizeof(struct test));
+   p->i=3;
+   printf("%d\n",p->i);
+
+   //clear(test);
+}
+
+//############# EXO2 ##################################################
+
+#include<iostream>
+//using namespace std;
+
+int main()
+{
+
+int i=0;
+while(i<=10)
+       {
+        using namespace std;
+        cout<<"ETAPE "<< i << endl;  //cout<<"ETAPE "<< i << std::endl;
+        i++;
+       }
+//=============================================================================
+
+int j;
+for(j=50; j<=60; j+=1)
+       {
+        using namespace std;
+        cout<<"USER "<< j << endl;
+       }
+return 0;
+}
+
+
+//############# EXO3 ##################################################
+
+#include<iostream>
+using namespace std;
+
+void classe1(int *p1, int *p2)
+{
+
+    if (*p1>*p2)
+    {
+        int temp=*p2;
+        *p2 = *p1;
+        *p1=temp;
+    }
+}
+
+void classe2(int &ptr1, int &ptr2)
+
+{
+    if (ptr1>ptr2)
+    {
+    int temp=ptr2;
+    ptr2=ptr1;
+    ptr1=temp;
+    }
+}
+
+int main()
+{
+
+    int a;
+    int b;
+
+    int ptr1=5;
+    int ptr2=3;
+
+    int *p1;
+    p1=&a;
+    *p1=2;
+
+    int *p2;
+    p2=&b;
+    *p2=1;
+
+    //cout<< "//////Saisir 2 entiers" << *p1 << *p2 << ptr1 << ptr2 << std::endl;
+    //cin >> *p1 >> *p2 >> ptr1 >> ptr2;
+
+    cout << "les entiers *p1*p2 = " << *p1 << *p2 << std::endl;
+    cout << "les entiers *ptr1*ptr2 = " << ptr1 << ptr2 << std::endl;
+
+    cout << "avant classement *p1 vaut " << *p1 << std::endl;
+    cout << "avant classement *p2 vaut " << *p2 << std::endl;
+    cout << "avant classement ptr1 vaut " << ptr1 << std::endl;
+    cout << "avant classement ptr2 vaut " << ptr2 << std::endl;
+
+    classe1(p1,p2);
+    classe2(ptr1,ptr2);
+
+    cout << "classement " << *p1 << *p2 << ptr1 << ptr2 << std::endl;
+
+
+    cout << "apres classement *p1 vaut " << *p1 << std::endl;
+    cout << "apres classement *p2 vaut " << *p2 << std::endl;
+    cout << "apres classement ptr1 vaut " << ptr1 << std::endl;
+    cout << "apres classement ptr2 vaut " << ptr2 << std::endl;
+
+}
+
+//############# EXO4 ##################################################
+//##### ENTIER.H
+
+#ifndef ENTIER_H
+#define ENTIER_H
+
+#include <iostream>
+
+class Entier
+{
+public:
+    Entier();
+    Entier(const Entier &val);
+
+    int i;
+    int *ptr;
+    void print();
+
+};
+
+#endif // ENTIER_H
+
+//##### ENTIER.CPP
+
+#include "entier.h"
+using namespace std;
+
+Entier::Entier()
+{
+    i=8;
+    ptr=&i;
+}
+
+/*ajout de constructeur de copie synthétisé
+pour pouvoir modifier les valeurs de *ptr*/
+Entier::Entier(const Entier &val)
+{
+    i=val.i;
+    ptr=&i;
+}
+
+
+void Entier::print()
+{
+
+    std::cout << *ptr << std::endl;
+    //std::cout << ptr << std::endl;
+    //std::cout << &i << std::endl;
+}
+
+
+//##### MAIN.CPP
+
+#include <iostream>
+#include "entier.h"
+
+using namespace std;
+
+int main()
+{
+    Entier p;
+    p.print();
+
+    Entier q(p);
+    q.print();
+
+    q.i=5;
+    q.print();
+
+    return (0);
+}
+
+
+//############# EXO5 ##################################################
+//##### MACLASSE.H
+
+#ifndef MACLASSE_H
+#define MACLASSE_H
+#include <iostream>
+
+class maclasse
+{
+public:
+    maclasse();
+    //maclasse(const maclasse &val);
+    int m_a=0;
+    int m_b=2;
+    int m_c=5;
+    int m_d=7;
+    void print();
+};
+
+#endif // MACLASSE_H
+
+
+//##### MACLASSE.CPP
+
+#include "maclasse.h"
+using namespace std;
+
+maclasse::maclasse()
+{
+   //m_a=0;
+   //m_b=2;
+   //m_c=5;
+   //m_d=7;
+}
+//maclasse::maclasse(const maclasse &val)
+//{
+//    m_a=val.m_a;
+//    m_b=val.m_b;
+//    m_c=val.m_c;
+//    m_d=val.m_d;
+//}
+
+void maclasse::print()
+{
+  std::cout << m_a << std::endl << m_b << std::endl << m_c << std::endl << m_d << std::endl;
+}
+
+
+
+//##### MAIN.CPP
+
+#include <iostream>
+#include "maclasse.h"
+
+using namespace std;
+
+int main()
+{
+    maclasse z;
+    z.print();
+    return 0;
+}
+
+
+//############# EXO6 ##################################################
+//##### MACLASSESTATIC.H
+
+#ifndef MACLASSESTATIC_H
+#define MACLASSESTATIC_H
+#include <iostream>
+
+class maclassestatic
+{
+public:
+    maclassestatic();
+    static int i ;
+    void methode();
+    //static int maclassestatic:methode();
+};
+
+#endif // MACLASSESTATIC_H
+
+
+
+//##### MACLASSESTATIC.CPP
+
+#include "maclassestatic.h"
+
+int maclassestatic::i=0;
+
+maclassestatic::maclassestatic()
+{
+
+}
+
+void maclassestatic::methode()
+{
+  i++;
+}
+
+
+//##### MAIN.CPP
+
+#include <iostream>
+#include "maclassestatic.h"
+using namespace std;
+
+int main()
+{
+     maclassestatic a;
+
+    for ( int j = 0; j< 10; j++)
+    {
+      a.methode();
+      std::cout<< maclassestatic::i <<std::endl;
+    }
+
+}
+
+
+//############# EXO7 ##################################################
+//##### MERE.H
+
+#ifndef MERE_H
+#define MERE_H
+#include <iostream>
+
+class mere
+{
+public:
+    mere();
+    int i=0;
+    void methodemere();
+    ~mere();
+};
+
+#endif // MERE_H
+
+
+//##### FILLE.H
+
+#ifndef FILLE_H
+#define FILLE_H
+#include "mere.h"
+#include <iostream>
+
+class fille : public mere
+{
+public:
+    fille();
+    int j=0;
+    void methodefille();
+   ~fille();
+};
+
+#endif // FILLE_H
+
+
+//##### MERE.CPP
+
+#include "mere.h"
+using namespace std;
+
+mere::mere()
+{
+  std::cout << "coucou je suis la mere" << std::endl;
+}
+
+void mere::methodemere()
+{
+
+}
+
+mere::~mere()
+{
+    std::cout << "coucou je suis le destructeur de la mere" << std::endl;
+
+}
+
+
+//##### FILLE.CPP
+
+#include "fille.h"
+using namespace std;
+
+fille::fille()
+{
+  std::cout << "coucou je suis la fille" << std::endl;
+}
+
+void fille::methodefille()
+{
+
+}
+
+fille::~fille()
+{
+    std::cout << "coucou je suis le destructeur de la fille" << std::endl;
+}
+
+
+//##### MAIN.CPP
+
+#include <iostream>
+#include "mere.h"
+#include "fille.h"
+
+using namespace std;
+
+int main()
+{
+    mere m;
+    fille f;
+
+}
+
+//###############################################################
+
+TEST SAVE
+test
+
+
+
+
+
+
+
