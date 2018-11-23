@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/photo">
+        <file>mainwindow.ui</file>
+        <file>52235_001.jpg</file>
+        <file>pt26833.jpg</file>
+    </qresource>
+</RCC>
