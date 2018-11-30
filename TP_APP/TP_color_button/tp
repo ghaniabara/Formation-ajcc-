@@ -1,0 +1,146 @@
+////////////////////////////////////////////// Correction TP/////////////////////////////////////////////////////////////////////////////
+
+########################## main.cpp #############################################
+
+#include "mainwindow.h"
+#include <QApplication>
+
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
+
+    return a.exec();
+}
+//########################## mainwindow.cpp ######################################
+
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
+
+MainWindow::MainWindow(QWidget *parent) :
+    QMainWindow(parent),
+    ui(new Ui::MainWindow)
+{
+    ui->setupUi(this);
+    //connect(ui->pushButtonOk, this, SIGNAL(clicked()), this, SLOT(close()));
+
+    ui->pushButton->setColor(Qt::red);
+
+}
+
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
+
+//########################## mainwindow.cpp ########################## 
+
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
+
+
+#include <QMainWindow>
+
+namespace Ui {
+class MainWindow;
+}
+
+class MainWindow : public QMainWindow
+{
+    Q_OBJECT
+
+public:
+    explicit MainWindow(QWidget *parent = 0);
+    ~MainWindow();
+
+
+private:
+    Ui::MainWindow *ui;
+};
+
+#endif // MAINWINDOW_H
+
+
+//########################## colorbutton.cpp ########################## 
+#include "colorbutton.h"
+#include <QColorDialog>
+#include <QPixmap>
+#include <QPainter>
+#include <QDebug>
+
+
+ColorButton::ColorButton(QWidget *parent):QPushButton(parent)
+
+{
+    connect(this, SIGNAL(clicked(bool)), this, SLOT(change_color()));
+    color = (Qt::green);
+}
+
+QColor ColorButton::getColor()
+{
+    return color;
+}
+
+void ColorButton::setColor(QColor col)
+{
+    color=col;
+}
+
+
+void ColorButton::change_color()
+{
+
+    color = QColorDialog::getColor(color, this, tr("Sélectionner une couleur"));
+
+}
+
+void ColorButton::paintEvent(QPaintEvent *ev)
+{
+
+
+    QPushButton::paintEvent(ev);
+
+    QPainter painter(this);
+    QBrush brush(color);
+    QPen pen(color);
+    painter.setPen(pen);
+    painter.setBrush(brush);
+
+    painter.drawRect(0+4,0+4,width()-8,height()-8);
+
+}
+
+//########################## colorbutton.h ########################## 
+
+#ifndef COLORBUTTON_H
+#define COLORBUTTON_H
+#include <QColorDialog>
+
+#include <QPushButton>
+
+namespace Ui {
+class ColorButton;
+}
+
+class ColorButton : public QPushButton
+{
+    Q_OBJECT
+public:
+    ColorButton(QWidget *parent);
+    QColor getColor();
+    void setColor(QColor color);
+
+private slots:
+    void change_color();
+
+
+private:
+    QColor color;
+    void paintEvent(QPaintEvent *ev);
+};
+
+#endif // COLORBUTTON_H
+
+
+
