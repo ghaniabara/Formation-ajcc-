@@ -1,0 +1,20 @@
+#!/bin/sh
+
+
+# ajout les deux lignes dans config.txt
+
+
+
+grep "hdmi_force_hotplug =1" ~/Documents/buildroot-2018.11/output/images/rpi-firmware/config.txt
+if [ $? -eq 1 ]
+then
+   echo "hdmi_force_hotplug =1" >> ~/Documents/buildroot-2018.11/output/images/rpi-firmware/config.txt;
+fi
+
+grep "hdmi_drive =1" ~/Documents/buildroot-2018.11/output/images/rpi-firmware/config.txt
+
+if [ $? -eq 1 ]
+then
+   echo "hdmi_drive=1" >> ~/Documents/buildroot-2018.11/output/images/rpi-firmware/config.txt;
+fi
+
