@@ -1,0 +1,124 @@
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
+#include <QString>
+#include <QJsonDocument>
+#include <QSettings>
+#include <QJsonArray>
+#include <QJsonObject>
+
+
+
+MainWindow::MainWindow(QWidget *parent) :
+    QMainWindow(parent),
+    ui(new Ui::MainWindow)
+{
+    ui->setupUi(this);
+    m_manager = new QNetworkAccessManager(this);
+
+    QString latitude = "48.871673";
+    QString longitude = "2.346115";
+    QString rayon = "500";
+
+    m_request.setUrl(QUrl("https://public.opendatasoft.com/api/records/1.0/search/?dataset=evenements-publics-cibul&sort=date_start&facet=tags&facet=placename&facet=department&facet=region&facet=city&facet=date_start&facet=date_end&facet=pricing_info&facet=updated_at&facet=city_district&refine.date_start=2018-12-08&geofilter.distance="+latitude+"%2C+"+longitude+"%2C+"+rayon));
+
+    m_request.setRawHeader("User-Agent", "MyOwnBrowser 1.0");
+    connect(m_manager, SIGNAL(finished(QNetworkReply *)), this, SLOT(reponseRecue(QNetworkReply *)));
+    m_reply = m_manager->get(m_request);
+    connect(m_reply, SIGNAL(readyRead()), this, SLOT(slotReadyRead()));
+    connect(m_reply, SIGNAL(error(QNetworkReply::NetworkError)), this, SLOT(slotError(QNetworkReply::NetworkError)));
+    connect(m_reply, SIGNAL(sslErrors(QList<QSslError>)), this, SLOT(slotSslErrors(QList<QSslError>)));
+    connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(slotReadyRead()));
+
+
+}
+
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
+
+
+void MainWindow::reponseRecue(QNetworkReply *)
+{
+
+    qDebug()<< "reponseRecue";
+}
+
+void MainWindow::slotReadyRead()
+{
+
+    QByteArray m_response = m_reply->readAll();
+    qDebug()<< "bytearry" << m_response.isEmpty() <<endl;
+
+    QJsonDocument json = QJsonDocument::fromJson(m_response);
+    qDebug() << "mon json" << json.isEmpty() <<endl;
+
+    QString strJson(json.toJson(QJsonDocument::Indented)); // Indented or Compact
+    qDebug() << "strJson" << strJson.isEmpty() <<endl;
+
+    ui->textEdit->append(strJson);
+
+   /* qDebug()<< "afficher nhits : nbr d'événement"<<endl;
+    qDebug()<< json.object().toVariantMap()["nhits"]<<endl;
+
+    qDebug()<< "afficher records 0"<<endl;
+    qDebug()<< json.object().toVariantMap()["records"].toJsonArray().at(0)<<endl;
+
+    qDebug()<< "afficher records 1"<<endl;
+    qDebug()<< json.object().toVariantMap()["records"].toJsonArray().at(1)<<endl;
+
+    qDebug()<< "afficher geometry de records 1"<<endl;
+    qDebug()<< json.object().toVariantMap()["records"].toJsonArray().at(1)["geometry"]<<endl;
+
+    qDebug()<< "afficher image de records 1"<<endl;
+    qDebug()<< json.object().toVariantMap()["records"].toJsonArray().at(1)["fields"]["image"]<<endl;
+
+    qDebug()<< "afficher title de records 1"<<endl;
+    qDebug()<< json.object().toVariantMap()["records"].toJsonArray().at(1)["fields"]["title"]<<endl;
+
+    qDebug()<< "afficher adress de records 1"<<endl;
+    qDebug()<< json.object().toVariantMap()["records"].toJsonArray().at(1)["fields"]["address"]<<endl;
+
+    qDebug()<< "afficher date de début/fin de records 1"<<endl;
+    qDebug()<< json.object().toVariantMap()["records"].toJsonArray().at(1)["fields"]["space_time_info"]<<endl;
+
+    qDebug()<< "afficher tarif de records 1"<<endl;
+    qDebug()<< json.object().toVariantMap()["records"].toJsonArray().at(1)["fields"]["pricing_info"]<<endl;*/
+
+
+    int i;
+
+    int count = json.object().toVariantMap()["records"].toJsonArray().count();
+
+    for (int i = 0; i < count; i++)
+        {
+
+            qDebug()<< "geometry de record: " << i << "=>" << json.object().toVariantMap()["records"].toJsonArray().at(i)["geometry"]<<endl;
+
+            qDebug()<< "image de record: " << i << "=>" << json.object().toVariantMap()["records"].toJsonArray().at(i)["fields"]["image"]<<endl;
+
+            qDebug()<< "title de record: " << i << "=>" << json.object().toVariantMap()["records"].toJsonArray().at(i)["fields"]["title"]<<endl;
+
+            qDebug()<< "address de record: " << i << "=>" << json.object().toVariantMap()["records"].toJsonArray().at(i)["fields"]["address"]<<endl;
+
+            qDebug()<< "space time info de record: " << i << "=>" << json.object().toVariantMap()["records"].toJsonArray().at(i)["fields"]["space_time_info"]<<endl;
+
+            qDebug()<< "tarif de record: " << i << "=>" << json.object().toVariantMap()["records"].toJsonArray().at(i)["fields"]["pricing_info"]<<endl;
+            ui->textEdit->append(strJson);
+        }
+}
+
+void MainWindow::slotError(QNetworkReply::NetworkError erreurtype)
+{
+
+    QString m_message;
+    if (erreurtype == QNetworkReply::NoError) { return; }
+    else { m_message = QString("Erreur"); }
+    qDebug()<< "Erreur";
+}
+
+void MainWindow::slotSslErrors(QList<QSslError>)
+{
+    qDebug()<< "slotSslErrors";
+}
+

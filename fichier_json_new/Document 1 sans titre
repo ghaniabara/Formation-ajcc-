@@ -1,0 +1,213 @@
+{
+    "facet_groups": [
+        {
+            "facets": [
+                {
+                    "count": 1,
+                    "name": "Liberté Living Lab",
+                    "path": "Liberté Living Lab",
+                    "state": "displayed"
+                },
+                {
+                    "count": 1,
+                    "name": "Église Saint-Eugène - Sainte-Cécile",
+                    "path": "Église Saint-Eugène - Sainte-Cécile",
+                    "state": "displayed"
+                }
+            ],
+            "name": "placename"
+        },
+        {
+            "facets": [
+                {
+                    "count": 2,
+                    "name": "Paris",
+                    "path": "Paris",
+                    "state": "displayed"
+                }
+            ],
+            "name": "department"
+        },
+        {
+            "facets": [
+                {
+                    "count": 2,
+                    "name": "Île-de-France",
+                    "path": "Île-de-France",
+                    "state": "displayed"
+                }
+            ],
+            "name": "region"
+        },
+        {
+            "facets": [
+                {
+                    "count": 2,
+                    "name": "Paris",
+                    "path": "Paris",
+                    "state": "displayed"
+                }
+            ],
+            "name": "city"
+        },
+        {
+            "facets": [
+                {
+                    "count": 2,
+                    "facets": [
+                        {
+                            "count": 2,
+                            "name": "12",
+                            "path": "2018/12",
+                            "state": "displayed"
+                        }
+                    ],
+                    "name": "2018",
+                    "path": "2018",
+                    "state": "displayed"
+                }
+            ],
+            "name": "date_start"
+        },
+        {
+            "facets": [
+                {
+                    "count": 2,
+                    "name": "2018",
+                    "path": "2018",
+                    "state": "displayed"
+                }
+            ],
+            "name": "date_end"
+        },
+        {
+            "facets": [
+                {
+                    "count": 1,
+                    "name": "sur inscription",
+                    "path": "sur inscription",
+                    "state": "displayed"
+                }
+            ],
+            "name": "pricing_info"
+        },
+        {
+            "facets": [
+                {
+                    "count": 2,
+                    "name": "2018",
+                    "path": "2018",
+                    "state": "displayed"
+                }
+            ],
+            "name": "updated_at"
+        }
+    ],
+    "nhits": 2,
+    "parameters": {
+        "dataset": [
+            "evenements-publics-cibul"
+        ],
+        "facet": [
+            "tags",
+            "placename",
+            "department",
+            "region",
+            "city",
+            "date_start",
+            "date_end",
+            "pricing_info",
+            "updated_at",
+            "city_district"
+        ],
+        "format": "json",
+        "geofilter.distance": [
+            "48.871673, 2.346115, 500"
+        ],
+        "refine": {
+            "date_start": "2018-12-08"
+        },
+        "rows": 10,
+        "sort": [
+            "date_start"
+        ],
+        "timezone": "UTC"
+    },
+    "records": [
+        {
+            "datasetid": "evenements-publics-cibul",
+            "fields": {
+                "address": "4 bis rue Sainte-Cécile, 75006 Paris",
+                "city": "Paris",
+                "date_end": "2018-12-08",
+                "date_start": "2018-12-08",
+                "department": "Paris",
+                "description": "Messe à 19h suivie de la procession jusqu'à la Basilique Notre-Dame des Victoires.",
+                "dist": "255",
+                "image": "http://cibul.s3.amazonaws.com/event_procession-pour-l-immaculee-conception_710641.jpg",
+                "image_thumb": "http://cibul.s3.amazonaws.com/evtbevent_procession-pour-l-immaculee-conception_710641.jpg",
+                "lang": "fr",
+                "latlon": [
+                    48.873801,
+                    2.347444
+                ],
+                "link": "http://openagenda.com/event/procession-pour-l-immaculee-conception",
+                "placename": "Église Saint-Eugène - Sainte-Cécile",
+                "region": "Île-de-France",
+                "space_time_info": "Église Saint-Eugène - Sainte-Cécile, le samedi 8 décembre à 19:00",
+                "timetable": "2018-12-08T19:00:00 2018-12-08T21:30:00",
+                "title": "Procession pour l'Immaculée Conception",
+                "uid": "70385073",
+                "updated_at": "2018-11-29T15:50:05+00:00"
+            },
+            "geometry": {
+                "coordinates": [
+                    2.347444,
+                    48.873801
+                ],
+                "type": "Point"
+            },
+            "record_timestamp": "2018-11-29T15:50:05+00:00",
+            "recordid": "1d3d4843a8a74c9234dcc38fa6b8a0a8bb6b6b4f"
+        },
+        {
+            "datasetid": "evenements-publics-cibul",
+            "fields": {
+                "address": "9 rue d'Alexandrie",
+                "city": "Paris",
+                "date_end": "2018-12-09",
+                "date_start": "2018-12-08",
+                "department": "Paris",
+                "description": "Les Archives nationales organisent leur premier hackathon sur le thème « Archives et citoyenneté », pour mettre en valeur leurs données et pour identifier des services numériques innovants.",
+                "dist": "463",
+                "free_text": "Les 8 et 9 décembre 2018 - un an après leur barcamp - les Archives nationales organisent leur premier hackathon sur le thème « Archives et citoyenneté ». Cet événement s’inscrit dans la politique d’ouverture des données que les Archives nationales ont mise en place conformément aux dispositions des lois Valter (2015) et Lemaire (2016), mais aussi dans une démarche d’analyse des pratiques professionnelles archivistiques au regard des nouveaux usages qui se développent dans le monde du numérique.\n\nLe hackathon des Archives nationales est accueilli au Liberté Living Lab, lieu d'innovation technologique, civique et sociale au cœur de Paris (9, rue d’Alexandrie) et est ouvert - sur inscription - à tous ceux qui connaissent les archives comme à ceux qui les ignorent. L’ambition de l’institution est de toucher des publics issus de mondes divers et complémentaires : développeurs, data-scientists, ergonomes, designers, chercheurs, généalogistes, venant d’horizons variés tels qu'institutions culturelles, établissements de recherche ou d’enseignement, entreprises de service du numérique, univers des humanités numériques et du open data, etc.\n\nDu samedi 8 décembre 13h au dimanche 9 décembre 18h - sans interruption - une centaine de participants sont invités à développer des solutions innovantes pour identifier des services numériques correspondant à de nouveaux usages pour les publics. Notamment, les Archives nationales attendent de cet événement des projets pour identifier des services numériques destinés, entre autres choses, à améliorer l’exploitabilité des données en les rendant interopérables, à faciliter l’accès aux ressources librement communicables en améliorant l’expérience utilisateur au moyen d’outils de data-visualisation, géolocalisation, intelligence artificielle, et aussi à faire connaître d’une autre manière leurs missions et la richesse de leurs ressources à des nouvelles communautés de publics et d’utilisateurs\n\nLe lancement de l’événement se fera le vendredi 7 décembre à 18 h aux Archives nationales, site de Paris. Un prix en numéraire (4000 euros) sera attribué à l’équipe gagnante par un jury d’experts spécialement composé à cet effet.\n\nSite internet de l'événement:\n\nhttps://www.hackathon-archives-nationales.org/",
+                "image": "http://cibul.s3.amazonaws.com/event_les-archives-nationales-font-leur-hackathon_551885.jpg",
+                "image_thumb": "http://cibul.s3.amazonaws.com/evtbevent_les-archives-nationales-font-leur-hackathon_551885.jpg",
+                "lang": "fr",
+                "latlon": [
+                    48.868801,
+                    2.350724
+                ],
+                "link": "http://openagenda.com/event/les-archives-nationales-font-leur-hackathon",
+                "placename": "Liberté Living Lab",
+                "pricing_info": "sur inscription",
+                "region": "Île-de-France",
+                "space_time_info": "du samedi 8 décembre au dimanche 9 décembre à Liberté Living Lab",
+                "timetable": "2018-12-08T13:00:00 2018-12-08T07:00:00;2018-12-09T07:00:00 2018-12-09T18:00:00",
+                "title": "Les Archives nationales font leur hackathon",
+                "uid": "5181745",
+                "updated_at": "2018-10-12T14:20:35+00:00"
+            },
+            "geometry": {
+                "coordinates": [
+                    2.350724,
+                    48.868801
+                ],
+                "type": "Point"
+            },
+            "record_timestamp": "2018-10-12T14:20:35+00:00",
+            "recordid": "b33b8812e03ea301bbf5e452b78f5bd26ccdac21"
+        }
+    ]
+}
+
